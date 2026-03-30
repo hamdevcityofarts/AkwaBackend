@@ -28,7 +28,11 @@ const corsOptions = {
     'https://backend.grandhotelaeroport.com',
     'https://grandhotelaeroport.com',
     'https://www.grandhotelaeroport.com',
-    'https://admin.grandhotelaeroport.com' // ✅ AJOUT CRUCIAL
+    'https://admin.grandhotelaeroport.com',
+    'https://api.grandhotelsluxe.com',
+    'https://admin.grandhotelsluxe.com',
+    'https://grandhotelsluxe.com',
+    'https://test.grandhotelsluxe.com',
   ],
   credentials: true,
   optionsSuccessStatus: 200
