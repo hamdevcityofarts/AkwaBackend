@@ -32,7 +32,7 @@ const corsOptions = {
     'https://api.grandhotelsluxe.com',
     'https://admin.grandhotelsluxe.com',
     'https://grandhotelsluxe.com',
-    'https://test.grandhotelsluxe.com',
+    'https://testgrandhotelsluxe.com',
   ],
   credentials: true,
   optionsSuccessStatus: 200
@@ -92,7 +92,7 @@ const swaggerOptions = {
       {
         // Cette ligne détecte automatiquement si on est en prod ou en local
         url: process.env.NODE_ENV === 'production' 
-          ? 'https://backend.grandhotelaeroport.com/api' 
+          ? 'https://api.grandhotelsluxe.com/api' 
           : `http://localhost:${process.env.PORT || 5000}/api`,
         description: process.env.NODE_ENV === 'production' ? 'Serveur Production' : 'Serveur Local',
       },
