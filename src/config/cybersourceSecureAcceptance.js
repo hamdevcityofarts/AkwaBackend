@@ -30,7 +30,7 @@ class CybersourceSecureAcceptance {
     console.log('🔐 Génération paramètres paiement pour réservation:', data.reservationId);
     
     // ✅ URL de callback VERS LE BACKEND (pas le frontend !)
-    const backendUrl = process.env.BACKEND_URL || 'http://localhost:5000';
+    const backendUrl = process.env.BACKEND_URL || 'https://api.grandhotelsluxe.com/api';
     
     // ✅ NOUVEAU : Description dynamique selon l'option de paiement
     const paymentDescription = this.getPaymentDescription(data);
