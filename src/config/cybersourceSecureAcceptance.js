@@ -45,7 +45,7 @@ class CybersourceSecureAcceptance {
       transaction_uuid: `${data.reservationId}-${Date.now()}`,
       signed_date_time: new Date().toISOString().replace(/\.\d+Z$/, 'Z'),
       locale: 'fr-FR',
-      transaction_type: 'authorization',
+      transaction_type: 'sale',
       
       // ✅ CORRECTION: Utiliser l'ID COMPLET de la réservation
       reference_number: data.reservationId,

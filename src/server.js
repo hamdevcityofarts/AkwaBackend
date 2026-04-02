@@ -78,6 +78,7 @@ app.use('/api/chambres', require('./routes/chambreRoutes'));
 app.use('/api/reservations', require('./routes/reservationRoutes'));
 app.use('/api/payments', require('./routes/paiementRoutes'));
 app.use('/api/utilisateurs', require('./routes/userRoutes'));
+app.use('/api/codepromo', require('./routes/codePromoRoutes'));
 
 // Configuration Swagger
 const swaggerOptions = {
