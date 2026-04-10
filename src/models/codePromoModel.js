@@ -30,6 +30,12 @@ const codePromoSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Chambre'
   }],
+  // ✅ NOUVEAU : Titulaire du code promo
+  titulaire: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    default: null // null = appartient à l'hôtel
+  },
   dateDebut: {
     type: Date,
     required: true
