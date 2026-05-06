@@ -32,7 +32,7 @@ const corsOptions = {
     'https://api.grandhotelsluxe.com',
     'https://admin.grandhotelsluxe.com',
     'https://grandhotelsluxe.com',
-    'https://test.grandhotelsluxe.com',
+    'https://grandhotelsluxe.com',
   ],
   credentials: true,
   optionsSuccessStatus: 200
