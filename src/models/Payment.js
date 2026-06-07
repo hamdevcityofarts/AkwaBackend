@@ -50,7 +50,8 @@ const paymentSchema = new mongoose.Schema({
   // Informations de transaction
   transactionId: { 
     type: String, 
-    unique: true 
+    unique: true,
+    sparse: true  // ✅ CORRECTION : permet plusieurs documents sans transactionId
   },
   gateway: { 
     type: String, 
@@ -69,6 +70,28 @@ const paymentSchema = new mongoose.Schema({
     type: String 
   },
   
+  // ✅ NOUVEAU : Options de paiement partiel (champs utilisés par paiementController.js)
+  paymentOption: {
+    type: String,
+    enum: ['first-night', 'partial', 'full'],
+    default: 'full'
+  },
+  nightsPaid: {
+    type: Number,
+    default: 0
+  },
+
+  // ✅ NOUVEAU : Création automatique de compte client
+  autoAccountCreated: {
+    type: Boolean,
+    default: false
+  },
+  autoAccountUserId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    default: null
+  },
+
   // Remboursement
   refundOf: { 
     type: mongoose.Schema.Types.ObjectId, 
